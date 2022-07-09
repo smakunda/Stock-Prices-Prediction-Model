@@ -2,5 +2,5 @@ sklearn
 numpy  
 pandas
 seaborn
-matplotlib
+pyplot
 pickle
