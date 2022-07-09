@@ -10,7 +10,7 @@
 
 # In[19]:
 
-
+import streamlit
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
@@ -23,7 +23,7 @@ from keras.optimizers import SGD
 import math
 from sklearn.metrics import mean_squared_error
 import pickle
-import streamlit
+
 
 
 # In[2]:
