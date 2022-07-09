@@ -12,6 +12,7 @@
 
 
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 import pandas as pd
