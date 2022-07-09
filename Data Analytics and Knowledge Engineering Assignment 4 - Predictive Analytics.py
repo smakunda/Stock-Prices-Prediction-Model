@@ -22,6 +22,7 @@ from tensorflow.keras.optimizers import SGD
 #from keras.optimizers import SGD
 import math
 from sklearn.metrics import mean_squared_error
+import pickle
 
 
 # In[2]:
@@ -42,7 +43,7 @@ def return_rmse(test,predicted):
     print("The root mean squared error is {}.".format(rmse))
 
 
-# In[19]:
+# In[3]:
 
 
 data=pd.read_csv('C:/Datafiles/AABA_File.csv', index_col='Date', parse_dates=['Date'])
@@ -131,7 +132,7 @@ regressor.fit(X_train,y_train,epochs=50,batch_size=32)
 
 # ### Create array to hold stock
 
-# In[11]:
+# In[10]:
 
 
 # Get Test set ready same way as the training set.
@@ -143,7 +144,7 @@ inputs = inputs.reshape(-1,1)
 inputs  = sc.transform(inputs)
 
 
-# In[12]:
+# In[11]:
 
 
 # Preparing X_test and predicting the prices
@@ -156,14 +157,14 @@ predicted_stock_price = regressor.predict(X_test)
 predicted_stock_price = sc.inverse_transform(predicted_stock_price)
 
 
-# In[13]:
+# In[12]:
 
 
 # Visualizing the results for LSTM
 plot_predictions(test_set,predicted_stock_price)
 
 
-# In[14]:
+# In[13]:
 
 
 # Evaluating our model
@@ -174,7 +175,7 @@ return_rmse(test_set,predicted_stock_price)
 
 # # Create GRU architecture by creating layers, compiling the RNN and predicting the prices
 
-# In[15]:
+# In[14]:
 
 
 # The GRU architecture
@@ -199,7 +200,7 @@ regressorGRU.compile(optimizer=SGD(lr=0.01, decay=1e-7, momentum=0.9, nesterov=F
 regressorGRU.fit(X_train,y_train,epochs=50,batch_size=150)
 
 
-# In[16]:
+# In[15]:
 
 
 # Preparing X_test and predicting the prices
@@ -212,14 +213,14 @@ GRU_predicted_stock_price = regressorGRU.predict(X_test)
 GRU_predicted_stock_price = sc.inverse_transform(GRU_predicted_stock_price)
 
 
-# In[17]:
+# In[16]:
 
 
 # Visualizing the results for GRU
 plot_predictions(test_set,GRU_predicted_stock_price)
 
 
-# In[18]:
+# In[17]:
 
 
 # Evaluating GRU
