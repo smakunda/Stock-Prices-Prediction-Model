@@ -4,5 +4,4 @@ pandas
 seaborn
 matplotlib
 keras
-math
 pickle
