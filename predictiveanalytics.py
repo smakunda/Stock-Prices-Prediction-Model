@@ -47,7 +47,7 @@ def return_rmse(test,predicted):
 # In[3]:
 
 
-data=pd.read_csv('C:/Datafiles/AABA_File.csv', index_col='Date', parse_dates=['Date'])
+data=pd.read_csv('AABA_File.csv', index_col='Date', parse_dates=['Date'])
 print('The shape of the dataframe is :\n',data.shape)
 print(data)
 
