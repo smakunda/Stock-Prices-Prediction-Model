@@ -12,9 +12,9 @@
 
 
 import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-plt.style.use('fivethirtyeight')
+#import matplotlib
+#import matplotlib.pyplot as plt
+#plt.style.use('fivethirtyeight')
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
