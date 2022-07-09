@@ -3,7 +3,6 @@ numpy
 pandas
 seaborn
 matplotlib
-pyplot
 keras
 tensorflow
 math
