@@ -128,7 +128,7 @@ regressor.add(Dense(units=1))
 # Compiling the RNN
 regressor.compile(optimizer='rmsprop',loss='mean_squared_error')
 # Fitting to the training set
-regressor.fit(X_train,y_train,epochs=50,batch_size=32)
+regressor.fit(X_train,y_train,epochs=20,batch_size=32)
 
 
 # ### Create array to hold stock
@@ -198,7 +198,7 @@ regressorGRU.add(Dense(units=1))
 # Compiling the RNN
 regressorGRU.compile(optimizer=SGD(lr=0.01, decay=1e-7, momentum=0.9, nesterov=False),loss='mean_squared_error')
 # Fitting to the training set
-regressorGRU.fit(X_train,y_train,epochs=50,batch_size=150)
+regressorGRU.fit(X_train,y_train,epochs=20,batch_size=150)
 
 
 # In[15]:
